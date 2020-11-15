@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/server_title" >
+        <py.com.sodep.mobileforms.ui.preferences.SimpleTextPreference
+            android:key="FormServerURI"
+            android:title="@string/FormServerURI_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/account_title" >
+        <py.com.sodep.mobileforms.ui.preferences.SimpleTextPreference
+            android:key="User"
+            android:summary="@string/user_summary"
+            android:title="@string/user_title" />
+
+        <py.com.sodep.mobileforms.ui.preferences.ActionPreference
+            android:dialogMessage="@string/change_app_confirmation"
+            android:dialogTitle="@string/change_app"
+            android:key="change_app"
+            android:summary="@string/change_app_summary"
+            android:title="@string/change_app" />
+        <py.com.sodep.mobileforms.ui.preferences.ActionPreference
+            android:dialogMessage="@string/logout_confirmation"
+            android:dialogTitle="@string/logout"
+            android:key="logout"
+            android:summary="@string/logout_summary"
+            android:title="@string/logout" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/android_application" >
+        <py.com.sodep.mobileforms.ui.preferences.VersionPreference
+            android:key=""
+            android:title="@string/version" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Acerca De" >
+        <py.com.sodep.mobileforms.ui.preferences.SimpleTextPreference
+            android:key="web"
+            android:title="Powered by SODEP" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

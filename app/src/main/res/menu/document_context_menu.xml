@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/document_info_option"
+        android:title="@string/document_info_title"
+        android:visible="false" />
+    <item
+        android:id="@+id/delete_document_option"
+        android:title="@string/delete"/>
+
+    <item
+        android:visible="false"
+        android:id="@+id/retry_sync"
+        android:title="@string/retry_sync"/>
+
+</menu>

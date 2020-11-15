@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="labels">
+        <item>Inglés</item>
+        <item>Español</item>
+        <item>Alemán</item>
+    </string-array>
+    <string-array name="values">
+        <item>en</item>
+        <item>es</item>
+        <item>de</item>
+    </string-array>
+
+</resources>

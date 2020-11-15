@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <stroke
+        android:width="1px"
+        android:color="#429DB8" />
+
+    <solid android:color="@color/mf_form_button_pressed_background" >
+    </solid>
+
+    <padding
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp" />
+
+    <corners android:radius="4dp" />
+
+</shape>

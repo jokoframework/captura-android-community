@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/list_item2_textView01"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:textAppearance="@style/mf_home.list_item.text"
+        android:visibility="gone" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/list_item2_textView02"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:textAppearance="@style/mf_home.list_item.text"
+        android:visibility="gone" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/list_item2_textView10"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:maxLines="1"
+        android:textAppearance="@style/mf_home.list_item.description_text"
+        android:visibility="gone" >
+    </TextView>
+
+</LinearLayout>

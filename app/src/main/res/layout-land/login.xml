@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/mf_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical" >
+
+     <ImageView
+            android:id="@+id/logo"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/captura_logo" />
+
+        <RelativeLayout
+            android:id="@+id/welcome01_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/welcome_01_mailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/welcome_01_hint_mail"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/mf_hint_foreground_color"
+                android:textSize="18sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/welcome_01_passwordEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/welcome_01_mailEditText"
+                android:layout_alignRight="@+id/welcome_01_mailEditText"
+                android:layout_below="@id/welcome_01_mailEditText"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="@string/welcome_01_password_hint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/mf_hint_foreground_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/welcome_01_NextButton"
+                style="@style/mf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/welcome_01_passwordEditText"
+                android:layout_alignRight="@+id/welcome_01_passwordEditText"
+                android:layout_below="@+id/welcome_01_defaultServerCheckBox"
+                android:layout_marginTop="20dp"
+                android:onClick="next"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/welcome_01_next"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/welcome_01_defaultServerCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/welcome_01_passwordEditText"
+                android:layout_below="@id/welcome_01_passwordEditText"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:gravity="center_vertical|start"
+                android:text="@string/welcome_01_default_server"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/versionTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/welcome_01_NextButton"
+                android:layout_below="@+id/welcome_01_NextButton"
+                android:layout_marginTop="20dp"
+                android:text="0.0.1"
+                android:textAppearance="@style/mf_login.version_number" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/welcome02_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/welcome_02_serverEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/FormServerURI_summary"
+                android:inputType="textUri"
+                android:textColorHint="@color/mf_hint_foreground_color" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/plain_http_warningTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/welcome_02_serverEditText"
+                android:layout_marginTop="10dp"
+                android:text="@string/plain_http_warning"
+                android:textColor="#F4A936"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/welcome_02_NextButton"
+                style="@style/mf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/welcome_02_serverEditText"
+                android:layout_alignRight="@+id/welcome_02_serverEditText"
+                android:layout_below="@+id/welcome_02_serverEditText"
+                android:layout_marginTop="20dp"
+                android:onClick="next"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/welcome_02_next"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/versionTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/welcome_02_NextButton"
+                android:layout_below="@+id/welcome_02_NextButton"
+                android:layout_marginTop="20dp"
+                android:text="0.0.1"
+                android:textAppearance="@style/mf_login.version_number" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

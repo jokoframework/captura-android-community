@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:4.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files\
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://hades.hq.sodep.com.py/artifactory/libs-snapshot' }
+        // we ideally should only use release versions of the dependencies
+        maven { url 'https://hades.hq.sodep.com.py/artifactory/libs-release' }
+    }
+    project.ext {
+        appVersion = 3
+        debugMinify = true
+        debugUseProguard = false
+        jacksonCoreVersion = "2.9.10"
+        jacksonDatabindVersion = "2.9.10.3"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

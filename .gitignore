@@ -1,0 +1,13 @@
+build/
+.gradle/
+.idea/
+*.iml
+local.properties
+lint.xml
+.DS_Store
+*.apk
+mf_android/manifest-merger-release-report.txt
+app/release/output.json
+captures/
+app/fabric.properties
+app/google-services.json

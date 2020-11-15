@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/header_background"
+    android:gravity="center"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp"
+    android:scrollbars="none"
+    android:textAppearance="@style/mf_sectioned_list_header_title"
+    />

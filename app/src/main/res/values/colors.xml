@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mf_title_color">#FFFFFF</color>
+    <color name="mf_background">#F5F5F5</color>
+    <color name="mf_hint_foreground_color">#999999</color>
+    <color name="mf_released_button_background0">#004CD0</color>
+    <color name="mf_released_button_background1">#007FCC</color>
+    <color name="mf_pressed_button_background0">#FFCC34</color>
+    <color name="mf_pressed_button_background1">#FFC500</color>
+    <color name="mf_button_text_color">#FFFFFF</color>
+    <color name="mf_actionbar_background_color0">#676767</color>
+    <color name="mf_actionbar_background_color1">#999999</color>
+    <color name="mf_actionbar_tab_background">#EEEEEE</color>
+    <color name="mf_actionbar_text">#737373</color>
+    <color name="mf_sectioned_adapter_header">#717171</color>
+    <color name="mf_form_button_pressed_background">#FFCC34</color>
+    <color name="mf_form_button_released_background0">#2FB2C6</color>
+    <color name="mf_form_button_released_background1">#59BEDC</color>
+</resources>
