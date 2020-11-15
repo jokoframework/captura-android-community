@@ -5,11 +5,15 @@
 El stack tecnológico es fijo durante todo el desarrollo. Sólo en casos excepcionales, y programados; se hacen upgrades de versiones.
 
     - Android Stack tecnológico
-    - Requiere JAVA 8.
-    - Gradle 4.4
+    - JAVA 8.
+    - Gradle 6.5 o superior
     - Gradle Plugin 3.1.4
-    - Android Studio 3.5
+    - Android Studio 4
     - Sonarqube 7.9.1 (build 27448)
+
+## Pre-requisitos
+
+Debe obtener la configuración para el Firebase Crashlytics y Google Services desde una cuenta de Developer de Google Play para poder compilar el proyecto. 
 
 ## Generación del APK
 
