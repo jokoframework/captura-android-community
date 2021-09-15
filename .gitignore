@@ -10,4 +10,5 @@ mf_android/manifest-merger-release-report.txt
 app/release/output.json
 captures/
 app/fabric.properties
-app/google-services.json
+app/release
+app/debug

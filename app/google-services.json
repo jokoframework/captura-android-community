@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "696933756974",
+    "firebase_url": "https://captura-d278b.firebaseio.com",
+    "project_id": "captura-d278b",
+    "storage_bucket": "captura-d278b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696933756974:android:2bdab1b7cd2f09cacd6fbf",
+        "android_client_info": {
+          "package_name": "py.com.sodep.captura.forms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696933756974-gfbcnqroom10d1o52fe71q15ik8npq7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU8Cb3bUfPMFCznWWPi8ufDL1xgpV0gcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696933756974-gfbcnqroom10d1o52fe71q15ik8npq7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696933756974:android:47968fd2382c063fcd6fbf",
+        "android_client_info": {
+          "package_name": "py.com.capturasas.forms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696933756974-gfbcnqroom10d1o52fe71q15ik8npq7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU8Cb3bUfPMFCznWWPi8ufDL1xgpV0gcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696933756974-gfbcnqroom10d1o52fe71q15ik8npq7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

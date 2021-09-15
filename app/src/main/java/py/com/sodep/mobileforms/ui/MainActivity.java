@@ -8,12 +8,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBar.Tab;
-import android.support.v7.app.ActionBar.TabListener;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBar.Tab;
+import androidx.appcompat.app.ActionBar.TabListener;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -33,7 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -48,6 +49,7 @@ import py.com.sodep.captura.forms.BuildConfig;
 import py.com.sodep.mf.exchange.exceptions.AuthenticationException;
 import py.com.sodep.mf.exchange.exceptions.AuthenticationException.FailCause;
 import py.com.sodep.mf.exchange.exceptions.HttpResponseException;
+import py.com.sodep.mf.exchange.exceptions.SodepException;
 import py.com.sodep.mf.exchange.net.ServerConnection;
 import py.com.sodep.mf.exchange.objects.metadata.Application;
 import py.com.sodep.mf.exchange.objects.metadata.Form;
@@ -828,6 +830,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 	}
 
 	private Dialog errorMessageDialog() {
+		FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
 		builder.setTitle(R.string.sync_error);
@@ -847,12 +850,12 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 				break;
 			case NO_COOKIE:
 				message = getString(R.string.sync_failed_session_error_try_again);
-                ////Crashlytics.logException(exception);
+				crashlytics.recordException(exception);
 				logout[0] = true;
 				break;
 			case INVALID_SERVER_RESPONSE:
 				message = getString(R.string.sync_failed_http_error_try_again);
-                ////Crashlytics.logException(exception);
+				crashlytics.recordException(exception);
                 logout[0] = true;
 				break;
 			}
@@ -860,7 +863,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 			break;
 		case BAD_CONFIGURATION:
 			message = getString(R.string.sync_failed_bad_configuration);
-            //Crashlytics.logException(new Exception(message));
+			crashlytics.recordException(new SodepException(message));
 			logout[0] = true;
 			break;
 		case CONNECTION_FAILED:
@@ -875,16 +878,16 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 			break;
 		case PARSE_ERROR:
 			message = getString(R.string.sync_failed_parse_error);
-            //Crashlytics.logException(new Exception(message));
+			crashlytics.recordException(new SodepException(message));
 			break;
 		case SERVER_UNREACHABLE:
 			message = getString(R.string.server_unreachable);
-            //Crashlytics.logException(new Exception(message));
+			crashlytics.recordException(new SodepException(message));
 			break;
 		case RESPONSE_CODE_NOT_200:
 			HttpResponseException ex = (HttpResponseException) synchronizationErrorException;
 			message = ActivityUtils.getMessage(this, ex);
-            //Crashlytics.logException(new Exception(message));
+			crashlytics.recordException(new SodepException(message));
 			break;
 		case TOO_MANY_DEVICES:
 			break;
@@ -913,7 +916,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 	}
 
 	@Override
-	public void onTabReselected(Tab tab, android.support.v4.app.FragmentTransaction ft) {
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		switch (tab.getPosition()) {
 		case 1:
 			selectedProjectId = null;
@@ -924,7 +927,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 	}
 
 	@Override
-	public void onTabSelected(Tab tab, android.support.v4.app.FragmentTransaction ft) {
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		View projectsList = findViewById(R.id.listViewProjects);
 		View formsList = findViewById(R.id.listViewForms);
 		View documentsList = findViewById(R.id.listViewDocuments);
@@ -953,7 +956,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
 	}
 
 	@Override
-	public void onTabUnselected(Tab arg0, android.support.v4.app.FragmentTransaction arg1) {
+	public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
 
 	}
 }
