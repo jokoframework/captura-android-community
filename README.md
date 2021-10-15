@@ -15,8 +15,8 @@ El stack tecnológico es fijo durante todo el desarrollo. Sólo en casos excepci
 
 1. Debe obtener la configuración para el Firebase Crashlytics y Google Services desde una cuenta de Developer de Google Play para poder compilar el proyecto. 
 2. Instalar las dependencias en el repositorio maven local
-        - [Captura Exchange Community](https://github.com/jokoframework/captura-exchange-community)
-        - [Captura Form Definitions Community](https://github.com/jokoframework/captura-form_definitions-community)
+* [Captura Exchange Community](https://github.com/jokoframework/captura-exchange-community)
+* [Captura Form Definitions Community](https://github.com/jokoframework/captura-form_definitions-community)
 
 
 ## Generación del APK
