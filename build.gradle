@@ -18,11 +18,9 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
         google()
         jcenter()
-        maven { url 'https://hades.hq.sodep.com.py/artifactory/libs-snapshot' }
-        // we ideally should only use release versions of the dependencies
-        maven { url 'https://hades.hq.sodep.com.py/artifactory/libs-release' }
     }
     project.ext {
         appVersion = 11
