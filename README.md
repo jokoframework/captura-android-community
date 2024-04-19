@@ -26,7 +26,12 @@ Para generar el apk, son necesarias estas configuraciones en el `gradle.properti
     org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
 
 ## Acceder desde un IDE
-
+Para esto debe de haber levantado previamente el proyecto "captura-web".
+  
+Desde el directorio donde se encuentra el proyecto "captura-community-docker", levantar los contenedores Docker.
+    
+    docker compose up
+  
 Editar el archivo `/etc/hosts` utilizando un editor de texto (por ejemplo, `nano`):
    
     sudo nano /etc/hosts
